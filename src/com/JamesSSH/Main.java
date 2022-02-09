@@ -5,20 +5,19 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-    String in = null;
+    String in;
     Scanner input = new Scanner(System.in);
 
     System.out.println("Vector or Scalar");
-    if (!in.toLowerCase().equals( "vector") && !in.toLowerCase().equals("scalar")) {
+    do  {
         in = input.nextLine();
-    }
-    if (in.toLowerCase() == "vector"){
-
-    } else if (in.toLowerCase() == "scalar"){
-        if (in != "?"){
-            
-        }
+        misc.ClearTerminal();
+    } while (!in.equalsIgnoreCase( "vector") && !in.equalsIgnoreCase("scalar"));
+    if (in.equalsIgnoreCase("scalar")){
+        Nothing();
     }
 
     }
+    public static void Nothing(){}
 }
+
